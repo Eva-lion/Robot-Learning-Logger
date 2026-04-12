@@ -1,0 +1,31 @@
+# Rules folder
+rules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+venv.bak/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Build / dist
+*.egg-info/
+dist/
+build/
+
+# Data and logs (generated at runtime)
+data/episodes/
+data/rll.db
+logs/

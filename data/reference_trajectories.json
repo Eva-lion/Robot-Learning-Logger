@@ -1,0 +1,32 @@
+[
+  {
+    "scenario": "navigation",
+    "topic": "/odom/twist/linear",
+    "expected_pattern": "smooth_acceleration",
+    "description": "Robot accelerates from 0 to ~0.5 m/s over 2s, maintains speed, decelerates. Max jerk < 0.5 m/s^3."
+  },
+  {
+    "scenario": "navigation",
+    "topic": "/imu/angular_velocity",
+    "expected_pattern": "low_drift",
+    "description": "Angular velocity z stays near 0 during straight-line navigation. std_dev < 0.05 rad/s expected."
+  },
+  {
+    "scenario": "rotation",
+    "topic": "/imu/angular_velocity",
+    "expected_pattern": "controlled_spin",
+    "description": "Smooth angular velocity z ramp up/down during in-place rotation. No spikes > 3× mean."
+  },
+  {
+    "scenario": "idle",
+    "topic": "/imu/linear_acceleration",
+    "expected_pattern": "gravity_only",
+    "description": "During idle, z acceleration should be ~9.81 m/s^2, x/y near 0. std_dev < 0.1."
+  },
+  {
+    "scenario": "manipulation",
+    "topic": "/odom/twist/linear",
+    "expected_pattern": "near_zero",
+    "description": "During arm manipulation, base should remain nearly stationary. linear.x < 0.05 m/s."
+  }
+]

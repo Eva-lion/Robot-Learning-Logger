@@ -1,0 +1,13 @@
+{
+  "episode_id": "test-bad-001",
+  "session_id": "test-session",
+  "started_at": "2026-04-12T11:00:00+00:00",
+  "ended_at": "2026-04-12T11:01:00+00:00",
+  "topics": ["/imu/data"],
+  "frame_count": 0,
+  "scenario": "navigation",
+  "stats": [
+    {"topic": "/imu/angular_velocity", "field": "z", "min_val": -15.0, "max_val": 15.0, "mean_val": 0.0, "std_val": 5.0, "max_gap_ms": 50.0, "count": 500},
+    {"topic": "/imu/linear_acceleration", "field": "x", "min_val": -25.0, "max_val": 25.0, "mean_val": 0.0, "std_val": 8.0, "max_gap_ms": 50.0, "count": 500}
+  ]
+}

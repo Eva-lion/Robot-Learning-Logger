@@ -1,0 +1,15 @@
+[
+  {"topic": "/imu/angular_velocity", "field": "x", "min_val": -10.0, "max_val": 10.0, "max_std_dev": 2.0, "max_gap_ms": 100, "severity": "hard"},
+  {"topic": "/imu/angular_velocity", "field": "y", "min_val": -10.0, "max_val": 10.0, "max_std_dev": 2.0, "max_gap_ms": 100, "severity": "hard"},
+  {"topic": "/imu/angular_velocity", "field": "z", "min_val": -10.0, "max_val": 10.0, "max_std_dev": 2.0, "max_gap_ms": 100, "severity": "hard"},
+  {"topic": "/imu/linear_acceleration", "field": "x", "min_val": -20.0, "max_val": 20.0, "max_std_dev": 5.0, "max_gap_ms": 100, "severity": "hard"},
+  {"topic": "/imu/linear_acceleration", "field": "y", "min_val": -20.0, "max_val": 20.0, "max_std_dev": 5.0, "max_gap_ms": 100, "severity": "hard"},
+  {"topic": "/imu/linear_acceleration", "field": "z", "min_val": -30.0, "max_val": 30.0, "max_std_dev": 5.0, "max_gap_ms": 100, "severity": "hard"},
+  {"topic": "/odom/twist/linear", "field": "x", "min_val": -3.0, "max_val": 3.0, "max_std_dev": 1.0, "max_gap_ms": 200, "severity": "soft"},
+  {"topic": "/odom/twist/angular", "field": "z", "min_val": -3.14, "max_val": 3.14, "max_std_dev": 1.5, "max_gap_ms": 200, "severity": "soft"},
+  {"topic": "/odom/pose/position", "field": "x", "min_val": -100.0, "max_val": 100.0, "max_std_dev": 50.0, "max_gap_ms": 200, "severity": "soft"},
+  {"topic": "/odom/pose/position", "field": "y", "min_val": -100.0, "max_val": 100.0, "max_std_dev": 50.0, "max_gap_ms": 200, "severity": "soft"},
+  {"topic": "/camera/image_raw", "field": "fps", "min_val": 10.0, "max_val": 60.0, "max_std_dev": null, "max_gap_ms": 150, "severity": "soft"},
+  {"topic": "/camera/image_raw", "field": "width", "min_val": 320.0, "max_val": 1920.0, "max_std_dev": null, "max_gap_ms": null, "severity": "hard"},
+  {"topic": "/camera/image_raw", "field": "height", "min_val": 240.0, "max_val": 1080.0, "max_std_dev": null, "max_gap_ms": null, "severity": "hard"}
+]

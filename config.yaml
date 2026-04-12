@@ -1,0 +1,53 @@
+ros:
+  mode: roslibpy       
+  host: localhost
+  port: 9090
+  topics:
+    - /odom
+    - /imu/data
+    - /camera/image_raw
+  heartbeat_timeout_s: 5
+  reconnect_retries: 3
+
+data_collector:
+  storage_backend: local    # local | minio
+  local_path: data/episodes/
+  quota_gb: 1.0
+  crc_algorithm: sha256
+  buffer_maxlen: 1000
+
+quality_evaluator:
+  heuristics_only_fallback: true
+  llm_confidence_threshold: 0.7
+  llm_max_tokens_input: 4000
+  llm_response_tokens: 512
+  llm_temperature: 0.2
+  llm_timeout_s: 30
+  llm_retry_count: 3
+  llm_rate_limit_rpm: 10
+
+llm:
+  provider: openai 
+  model: gpt-4o-mini   
+
+memory:
+  db_path: data/rll.db
+  llm_cache_ttl_hours: 24
+  reference_traces_path: data/reference_trajectories.json
+  sensor_norms_path: data/norms.json
+
+api:
+  port: 8000
+  host: 127.0.0.1
+  rate_limit_rpm: 60
+
+observability:
+  prometheus_port: 8001
+  log_level: INFO           # DEBUG | INFO | WARNING | ERROR
+  log_format: json          # json | text
+  log_file: logs/rll.log
+  log_max_bytes: 52428800 
+  log_backup_count: 3
+
+dataset:
+  norms_version: "1.0.0"

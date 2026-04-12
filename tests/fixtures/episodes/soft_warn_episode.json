@@ -1,0 +1,13 @@
+{
+  "episode_id": "test-warn-001",
+  "session_id": "test-session",
+  "started_at": "2026-04-12T12:00:00+00:00",
+  "ended_at": "2026-04-12T12:01:00+00:00",
+  "topics": ["/odom"],
+  "frame_count": 0,
+  "scenario": "navigation",
+  "stats": [
+    {"topic": "/odom/twist/linear", "field": "x", "min_val": 0.0, "max_val": 2.5, "mean_val": 0.5, "std_val": 0.8, "max_gap_ms": 350.0, "count": 300},
+    {"topic": "/odom/twist/angular", "field": "z", "min_val": -1.0, "max_val": 1.0, "mean_val": 0.0, "std_val": 0.3, "max_gap_ms": 100.0, "count": 300}
+  ]
+}
